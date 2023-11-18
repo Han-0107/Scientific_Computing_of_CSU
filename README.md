@@ -96,6 +96,8 @@ end
 
 这段代码的意义在于，能直观地让用户了解MNIST数据集中的一串串数字是如何表示图像并最终显示在屏幕上的。
 
+![test](https://github.com/Han-0107/Graphs/blob/master/Graph_for_test.png)
+
 ```matlab
 % 将MNIST数据集中的数字转化为图像
 set(gcf,'unit','centimeters','position',[3 5 30 26]); 	% 设置图像的展示的位置
