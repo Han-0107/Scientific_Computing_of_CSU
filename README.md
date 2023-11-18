@@ -96,7 +96,7 @@ end
 
 这段代码的意义在于，能直观地让用户了解MNIST数据集中的一串串数字是如何表示图像并最终显示在屏幕上的。
 
-![test](https://github.com/Han-0107/Graphs/blob/master/Graph_for_test.png)
+![train](https://github.com/Han-0107/Graphs/blob/master/Graph_for_train.png)
 
 ```matlab
 % 将MNIST数据集中的数字转化为图像
@@ -130,6 +130,8 @@ b3 = double((rand(layerN(4),1)-0.5)/16);
 在神经网络的训练开始前，我需要确定各个网络层内部的参数，从而开始训练过程。在这里，我将一个28*28的矩阵逐步缩小，最终得到一个仅有10个元素的数组，这个数组表示的是当前图片可能是0-9数字的概率。
 
 下面介绍具体的训练过程，实际上就是通过不同的计算层对输入数据进行不断地计算，并以反向传播的方式更新各个层的参数。最后，在每次计算结束后记录当前的损失（lost）和精度（accuracy），这样来对神经网络进行评价。同时，由于在不同参数下的训练时间差别较大，因此我设计了MATLAB代码的运行进度条，让用户清晰地知道代码运行进度。
+
+![wb](https://github.com/Han-0107/Graphs/blob/master/WaitBar.png)
 
 ```matlab
 title('Training start!')
@@ -209,6 +211,8 @@ toc;
 #### Part 4
 
 我设定了1000次训练，在训练结束后，我将引入MNIST的测试集对模型进行测试。相比于训练集，测试集中的测试结果可能会略有差异，这是因为模型可能会学习训练集内部的一些规律从而导致轻微的过拟合。但在测试集中，模型将会面对全新的数据，因此这里将测得更加准确的结果：
+
+![tr](https://github.com/Han-0107/Graphs/blob/master/Train_result.png)
 
 ```matlab
 % test set
