@@ -1,0 +1,12 @@
+P = [2, -3, 0, 5, 13];
+Q = [1, 5, 8];
+Q1 = [0, 0, 1, 5, 8];
+dp = polyder(P);
+dpq = polyder(conv(P,Q1));
+dpcq = polyder(deconv(P, Q));
+disp("P(x)的导数为：");
+disp(dp);
+disp("P(x)Q(x)的导数为：");
+disp(dpq);
+disp("P(x)/Q(x)的导数为：");
+disp(dpcq);
