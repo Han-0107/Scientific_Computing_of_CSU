@@ -44,7 +44,7 @@ b3 = double((rand(layerN(4),1)-0.5)/16);
 %%
 % learning loop
 lRate = 0.0005; % acts very bad when it is lager than 0.0004
-epoch = 4000; % too lagert may over-trained or have NaN/Inf in model, less than 4k is safe
+epoch = 10000; % too lagert may over-trained or have NaN/Inf in model, less than 4k is safe
 epochSize = 500; % this can smooth the training process but SLOW it down
 los = [];
 accuracy = [];
